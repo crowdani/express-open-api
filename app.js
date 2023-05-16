@@ -5,6 +5,7 @@ var logger = require("morgan");
 var { initialize } = require("express-openapi");
 var swaggerUi = require("swagger-ui-express");
 
+
 var app = express();
 
 app.listen(3030);
@@ -26,7 +27,7 @@ app.use(
   swaggerUi.serve,
   swaggerUi.setup(null, {
     swaggerOptions: {
-      url: "http://localhost:3030/api-docs",
+      url: "/api-docs",
     },
   })
 );
